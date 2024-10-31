@@ -44,7 +44,7 @@ describe('journal', () => {
       expect(cacheMissResult).toEqual(storedValue);
 
       // Write to storage
-      persistableState.writeStorage(address, slot, cachedValue);
+      await persistableState.writeStorage(address, slot, cachedValue);
 
       // Get the storage value
       const cachedResult = await persistableState.readStorage(address, slot);
